@@ -1,0 +1,438 @@
+/* ==UserStyle==
+@name           dlang.org, run.dlang.io - Dark Theme
+@namespace      github.com/openstyles/stylus
+@version        0.1.0
+@description    A dark-theme for dlang.org and run.dlang.io
+@author         https://github.com/Just-Harry
+==/UserStyle== */
+
+@-moz-document domain("dlang.org"), domain("dlang.io")
+{
+	:root
+	{
+		--text: #E3E3E3;
+		--text-subtle: #C7C7C7;
+		--body-background: #171717;
+		--body-background-less: #242424;
+		--body-background-least: #2E2E2E;
+
+		--red-main: #B03931;
+		--red-hover: #742620;
+		--red-darkback: #D8645E;
+		--red-darkback-hover: #F47069;
+		--red-other-0: #98312A;
+		--red-other-1: #943029;
+
+		--border-main: #454545;
+
+		--transparent: transparent;
+
+		--template-param: #01cfff;
+
+		--code-attribute: #01cfff;
+		--code-comment: #57a64a;
+		--code-keyword: #569cd6;
+		--code-number: #b5cea8;
+		--code-string: #ce9178;
+	}
+
+	body, body.doc input, body.doc textarea, body.std input, body.std textarea, .navbar-bottom, .nav-links, .site-info
+	{
+		background-color: var(--body-background);
+		color: var(--text);
+	}
+
+	div#search-box form, .subnav, .subnav-helper, body#Home #content #tools, body#Home #content > .intro, body.frame #forum-content table.forum-table, textarea.d_code_stdin, textarea.d_code_args, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .leadingrow, .sidebar, .entry-content, body::before, .comments-area, #forum-index > tbody > tr > td:nth-child(2n), #group-index > tbody > tr > td:nth-child(2n), .post-info, .post-text
+	{
+		background-color: var(--body-background);
+	}
+
+	span#search-query input, span#search-dropdown select, span#search-submit button, a.btn, a.btn:hover, a.anchor:hover::after, body.dcompiler dt a.anchor:hover:before, .cm-s-eclipse span.cm-def, .cm-s-eclipse span.cm-operator, .cm-s-eclipse span.cm-property, .cm-s-eclipse span.cm-variable, .cm-s-eclipse span.cm-variable-2, .cm-s-eclipse span.cm-variable-3, .pln, .fun, .dec, .var, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .dont-highlight-link > a, #top a, .btn.donate-large:hover, .btn.donate-large, body.frame a, body.frame .forum-postsummary-author, .navbar-bottom .small, .cm-s-elegant span.cm-variable, .fa-select select, select, input, input:hover, input:focus, #comment, .ansi-bright-white-fg, .forum-index-description, .forum-postsummary-author, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default, .btn-default:hover, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, .comment-author, .comment-form label, label, #email-notes, .comment-notes
+	{
+		color: var(--text);
+	}
+
+	table.params, table, .console, .page-contents, .btn-default:hover, input.ng-pristine:hover, input.ng-pristine:focus
+	{
+		border-color: var(--text);
+	}
+
+	table th
+	{
+		border-bottom-color: var(--text);
+	}
+
+	.console
+	{
+		background-color: var(--text);
+	}
+
+	a, .question, .expand-toggle, .site-info a:hover, .site-info a:focus, .site-info a, #thread-overview .group-index-header > th > a
+	{
+		color: var(--red-main);
+	}
+
+	#top
+	{
+		border-bottom-color: var(--red-other-0);
+	}
+
+	#top #cssmenu > ul > li > ul, ul.pageNav li.selected, .forum-notice
+	{
+		border-color: var(--red-other-0);
+	}
+
+	#top #cssmenu > ul > li .menu-divider, #top #cssmenu
+	{
+		border-top-color: var(--red-other-1);
+	}
+
+	#top #cssmenu > ul
+	{
+		border-bottom-color: var(--red-other-1);
+	}
+
+	#top #cssmenu > ul > li .menu-divider:before
+	{
+		border-top-color: rgba(255, 255, 255, 0.1);
+	}
+
+	div#search-box form, span#search-query, span#search-dropdown, span#search-submit, .subnav, .subnav-helper, a.btn, pre, pre.prettyprint, div.prototype, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .CodeMirror, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .fa-select select, a.btn:hover, .d_decl > div, .d_decl + dd, select, .forum-table > tbody > tr > td, .forum-table > tbody > tr > th, .forum-table, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, #forum-content a img.post-gravatar
+	{
+		border-color: var(--border-main);
+	}
+
+	.subnav h2, body.std .subnav ul ul li > a > span::before, body.std .subnav ul ul li > h7 > span::before, tr.param, table td, body#Home #content > .intro
+	{
+		border-bottom-color: var(--border-main);
+	}
+
+	body.std .subnav ul ul ul, body.std .subnav li li > a > span, body.std .subnav li li > h7 > span, body.std .subnav ul ul li:last-child > a > span::before, body.std .subnav ul ul li:last-child > h7 > span::before
+	{
+		border-left-color: var(--border-main);
+	}
+
+	.modlist-submenu-dmd::before
+	{
+		border-top-color: var(--border-main);
+	}
+
+	.CodeMirror-gutters
+	{
+		border-right-color: var(--border-main);
+	}
+
+	span#search-query input, span#search-dropdown select, span#search-submit button
+	{
+		background: var(--transparent);
+	}
+
+	span#search-submit, input, input:hover, input:focus, #comment, .forum-table > tbody > tr > th, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default:hover, input.ng-pristine:hover, input.ng-pristine:focus
+	{
+		background-color: var(--body-background-least);
+	}
+
+	a.btn, body.frame #forum-content table.forum-table, .CodeMirror-gutters, .fa-select select, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .d_decl, .quickindex, select, ul.pageNav li.selected, .entry-header, .entry-footer, #sidebar, .forum-table > tbody > tr.subheader > th, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select
+	{
+		background-color: var(--body-background-less);
+	}
+
+	#top, #top #cssmenu > ul > li > ul, .btn.donate-large, .call_to_donate_btn
+	{
+		background-color: var(--red-main) !important;
+	}
+
+	.forum-quote
+	{
+		border-left-color: var(--red-other-0);
+	}
+
+	#top a:hover, #top #cssmenu li.open > a, #top #cssmenu li.active > a, .btn.donate-large:hover
+	{
+		background-color: var(--red-other-0);
+	}
+
+	span#search-submit button, body.frame #forum-content table.forum-table, .entry-footer a, .entry-footer a:hover, .entry-footer a:focus, .widget-title, .entry-footer, .search-field, .forum-quote, .forum-signature, time, .comment-list .reply a:hover, .comment-list .reply a:focus, .comment-list .reply a, .post-navigation .meta-nav
+	{
+		color: var(--text-subtle);
+	}
+
+	.subnav li.active > a, a:hover, .question:hover, .expand-toggle:hover
+	{
+		color: var(--red-hover);
+	}
+
+	.btn.donate-large
+	{
+		border-color: var(--red-main);
+	}
+
+	.black { color: black; }
+	.blue { color: blue; }
+	.green { color: green; }
+	.red { color: red; }
+	.white { color: white; }
+	.yellow { color: yellow; }
+
+	pre, pre.prettyprint, div.prototype, .bnf, .ddoccode, .d_code, .d_code2, .ccode, .cppcode, .cppcode2/*, code */
+	{
+		background-color: var(--body-background-least);
+	}
+
+	.CodeMirror, CodeMirror cm-s-elegant CodeMirror-wrap
+	{
+		background-color: var(--body-background-least) !important;
+		color:  var(--text) !important;
+	}
+
+	.template_param_list
+	{
+		color: var(--template-param);
+	}
+
+	.d_decl
+	{
+		border-left-color: var(--red-main);
+	}
+
+	#front-packages .dub-package-card
+	{
+		box-shadow: 0 2px 5px var(--border-main);
+	}
+
+	blockquote
+	{
+		background-color: #e5e5e5;
+	}
+
+	blockquote p:before
+	{
+		color: #bacaca;
+	}
+
+	/*
+	Styling for page anchor self-links.
+
+	These links look like regular headers unless hovered, in which case
+	they are underlined and display a pilcrow after them.
+	*/
+	a.anchor
+	{
+		color: #633; /* Use the regular header text color */
+	}
+
+	.console /* command line console */
+	{
+		background-color: #333;
+		color: #F5F5F5;
+	}
+	.console a
+	{
+		color: #D8645E;
+	}
+	.console a:hover
+	{
+		color: #F47069;
+	}
+
+	.moddeffile /* module definition file */
+	{
+		background-color: #efeffe;
+		color: #010199;
+	}
+
+	.scini /* sc.ini configuration file */
+	{
+		background-color: #fef6fe;
+		color: #111199;
+	}
+
+	.asmcode /* Asm code */
+	{
+		background-color: #afcbde;
+		border-color: #afcbde;
+	}
+
+	/* syntax highlighting
+
+	d_* classes come from Ddoc.
+	cm-* classes come from CodeMirror.
+
+	These classes come from prettify.js:
+	.pln - plain text
+	.str - string content
+	.kwd - keyword
+	.com - comment
+	.typ - type name
+	.lit - literal value
+	.pun - punctuation
+	.opn - lisp open bracket
+	.clo - lisp close bracket
+	.tag - markup tag name
+	.atn - markup attribute name
+	.atv - markup attribute value
+	.dec - declaration
+	.var - variable name
+	.fun - function name
+
+	*/
+
+	.d_comment, .cm-s-eclipse span.cm-comment, .com, .cm-s-elegant span.cm-comment
+	{
+		color: var(--code-comment);
+	}
+
+	.d_string, .cm-s-eclipse span.cm-string, .cm-s-eclipse span.cm-string-2, .str, .atv, .cm-s-elegant span.cm-string
+	{
+		color: var(--code-string);
+	}
+
+	.d_keyword, .cm-s-eclipse span.cm-keyword, .cm-s-eclipse span.cm-builtin, .kwd, .cm-s-elegant span.cm-keyword, .cm-s-elegant span.cm-builtin
+	{
+		color: var(--code-keyword);
+	}
+
+	.typ
+	{
+		color: #4040DC;
+	}
+
+	/* .cm-meta is here because it and .lit both match @-attributes */
+	.cm-s-eclipse span.cm-number, .cm-s-eclipse span.cm-meta, .lit, .cm-s-elegant span.cm-number
+	{
+		color: var(--code-number);
+	}
+
+	.cm-s-eclipse span.cm-attribute, .atn, .cm-s-elegant span.cm-meta
+	{
+		color: var(--code-attribute);
+	}
+
+	.cm-s-eclipse span.cm-tag, .tag
+	{
+		color: #ffaa00;
+	}
+
+	.cm-s-eclipse span.cm-error
+	{
+		color: #f00;
+	}
+
+
+	.cm-s-eclipse span.cm-word {color: #006;}
+	.cm-s-eclipse span.cm-atom {color: #219;}
+	.cm-s-eclipse span.cm-qualifier {color: #555;}
+	.cm-s-eclipse span.cm-bracket {color: #cc7;}
+	.cm-s-eclipse span.cm-link {color: #219;}
+
+	/* Focal symbol that is being documented */
+	.d_psymbol, .ddoc_psymbol
+	{
+		color: var(--red-darkback);
+	}
+
+	.tip > div
+	{
+		background: #555;
+		color: white;
+	}
+
+	.smallprint, .smallprint a
+	{
+		color: #999;
+	}
+
+	.smallprint a:hover
+	{
+		color: #555;
+	}
+
+	/* These are for the changelogs */
+	div.version font
+	{
+		color: #633;
+	}
+	/* Runnable-examples css */
+
+	div.d_code {background: #F5F5F5;}
+
+	.cm-s-eclipse .CodeMirror-matchingbracket {border:1px solid grey;color:black !important;}
+
+	input.runButton, input.resetButton, input.argsButton, input.inputButton, input.editButton, input.openInEditorButton
+	{
+		-moz-box-shadow:inset 0 1px 0 0 #ffffff;
+		-webkit-box-shadow:inset 0 1px 0 0 #ffffff;
+		box-shadow:inset 0 1px 0 0 #ffffff;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+		background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+		/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');*/
+		background-color:#ededed;
+		border:1px solid #dcdcdc;
+		color:#777777;
+		text-shadow:1px 1px 0px #ffffff;
+	}
+
+	input.runButton:hover, input.resetButton:hover, input.argsButton:hover, input.inputButton:hover, input.editButton:hover,input.runButton[disabled]
+	{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+		background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+		/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');*/
+		background-color:#dfdfdf;
+	}
+
+	/* Runnable-examples css -end */
+
+	.page-contents-header h3
+	{
+		color: #444;
+	}
+
+	/* Narrow layout stage 1: dropdown search, dropdown subnav */
+	@media only screen and (max-width: 66em)
+	{
+		#top .expand-container > #search-box
+		{
+			background: #B03931;
+			border: 1px solid #98312A;
+		}
+	}
+
+
+	/* Narrow layout stage 2: hamburger menu */
+	@media only screen and (max-width:54em)
+	{
+		#top .logo > a
+		{
+			background: transparent; /* override :hover background change */
+		}
+
+		#top #cssmenu
+		{
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			clear: both;
+		}
+		#top #cssmenu > ul
+		{
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	/**
+	 * Messages boxes.
+	 */
+	.message-box, .message-box a {
+		color: white;
+	}
+	.message-box-red {
+		background-color: #D60027;
+	}
+	.message-box-gray {
+		background-color: #797979;
+	}
+	.message-box-orange {
+		background-color:  #EC5315;
+	}
+	.message-box-green {
+		background-color: #4EBA0F;
+	}
+}
