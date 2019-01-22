@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           dlang.org, run.dlang.io - Dark Theme
 @namespace      github.com/openstyles/stylus
-@version        0.1.0
-@description    A dark-theme for dlang.org and run.dlang.io
+@version        0.2.0
+@description    A dark-theme for dlang.org, run.dlang.io, and dpldocs.info
 @author         https://github.com/Just-Harry
 ==/UserStyle== */
 
-@-moz-document domain("dlang.org"), domain("dlang.io")
+@-moz-document domain("dlang.org"), domain("dlang.io"), domain("dpldocs.info")
 {
 	:root
 	{
@@ -42,12 +42,12 @@
 		color: var(--text);
 	}
 
-	div#search-box form, .subnav, .subnav-helper, body#Home #content #tools, body#Home #content > .intro, body.frame #forum-content table.forum-table, textarea.d_code_stdin, textarea.d_code_args, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .leadingrow, .sidebar, .entry-content, body::before, .comments-area, #forum-index > tbody > tr > td:nth-child(2n), #group-index > tbody > tr > td:nth-child(2n), .post-info, .post-text
+	div#search-box form, .subnav, .subnav-helper, body#Home #content #tools, body#Home #content > .intro, body.frame #forum-content table.forum-table, textarea.d_code_stdin, textarea.d_code_args, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .leadingrow, .sidebar, .entry-content, body::before, .comments-area, #forum-index > tbody > tr > td:nth-child(2n), #group-index > tbody > tr > td:nth-child(2n), .post-info, .post-text, .subtabsHeader + div.repositoryReadme, #page-nav, .annotated-prototype .overloads li.overload-option
 	{
 		background-color: var(--body-background);
 	}
 
-	span#search-query input, span#search-dropdown select, span#search-submit button, a.btn, a.btn:hover, a.anchor:hover::after, body.dcompiler dt a.anchor:hover:before, .cm-s-eclipse span.cm-def, .cm-s-eclipse span.cm-operator, .cm-s-eclipse span.cm-property, .cm-s-eclipse span.cm-variable, .cm-s-eclipse span.cm-variable-2, .cm-s-eclipse span.cm-variable-3, .pln, .fun, .dec, .var, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .dont-highlight-link > a, #top a, .btn.donate-large:hover, .btn.donate-large, body.frame a, body.frame .forum-postsummary-author, .navbar-bottom .small, .cm-s-elegant span.cm-variable, .fa-select select, select, input, input:hover, input:focus, #comment, .ansi-bright-white-fg, .forum-index-description, .forum-postsummary-author, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default, .btn-default:hover, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, .comment-author, .comment-form label, label, #email-notes, .comment-notes
+	span#search-query input, span#search-dropdown select, span#search-submit button, a.btn, a.btn:hover, a.anchor:hover::after, body.dcompiler dt a.anchor:hover:before, .cm-s-eclipse span.cm-def, .cm-s-eclipse span.cm-operator, .cm-s-eclipse span.cm-property, .cm-s-eclipse span.cm-variable, .cm-s-eclipse span.cm-variable-2, .cm-s-eclipse span.cm-variable-3, .pln, .fun, .dec, .var, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .dont-highlight-link > a, #top a, .btn.donate-large:hover, .btn.donate-large, body.frame a, body.frame .forum-postsummary-author, .navbar-bottom .small, .cm-s-elegant span.cm-variable, .fa-select select, select, input, input:hover, input:focus, #comment, .ansi-bright-white-fg, .forum-index-description, .forum-postsummary-author, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default, .btn-default:hover, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, .comment-author, .comment-form label, label, #email-notes, .comment-notes, div.packageInfo > *, .markdown-body, .member-list dt .simplified-prototype
 	{
 		color: var(--text);
 	}
@@ -67,7 +67,7 @@
 		background-color: var(--text);
 	}
 
-	a, .question, .expand-toggle, .site-info a:hover, .site-info a:focus, .site-info a, #thread-overview .group-index-header > th > a
+	a, .question, .expand-toggle, .site-info a:hover, .site-info a:focus, .site-info a, #thread-overview .group-index-header > th > a, a:link
 	{
 		color: var(--red-main);
 	}
@@ -82,7 +82,7 @@
 		border-color: var(--red-other-0);
 	}
 
-	#top #cssmenu > ul > li .menu-divider, #top #cssmenu
+	#top #cssmenu > ul > li .menu-divider, #top #cssmenu, .subtabsHeader + div.repositoryReadme
 	{
 		border-top-color: var(--red-other-1);
 	}
@@ -97,7 +97,7 @@
 		border-top-color: rgba(255, 255, 255, 0.1);
 	}
 
-	div#search-box form, span#search-query, span#search-dropdown, span#search-submit, .subnav, .subnav-helper, a.btn, pre, pre.prettyprint, div.prototype, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .CodeMirror, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .fa-select select, a.btn:hover, .d_decl > div, .d_decl + dd, select, .forum-table > tbody > tr > td, .forum-table > tbody > tr > th, .forum-table, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, #forum-content a img.post-gravatar
+	div#search-box form, span#search-query, span#search-dropdown, span#search-submit, .subnav, .subnav-helper, a.btn, pre, pre.prettyprint, div.prototype, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .CodeMirror, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .fa-select select, a.btn:hover, .d_decl > div, .d_decl + dd, select, .forum-table > tbody > tr > td, .forum-table > tbody > tr > th, .forum-table, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, #forum-content a img.post-gravatar, .subtabsHeader + div.repositoryReadme, .member-list dt .simplified-prototype, pre.d_code, .block-code:not([data-language=""]):not([data-language="pre"])
 	{
 		border-color: var(--border-main);
 	}
@@ -127,12 +127,12 @@
 		background: var(--transparent);
 	}
 
-	span#search-submit, input, input:hover, input:focus, #comment, .forum-table > tbody > tr > th, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default:hover, input.ng-pristine:hover, input.ng-pristine:focus
+	span#search-submit, input, input:hover, input:focus, #comment, .forum-table > tbody > tr > th, textarea, textarea:hover, textarea:focus, .forum-notice, .btn-default:hover, input.ng-pristine:hover, input.ng-pristine:focus, .aggregate-prototype #help-link:hover, .function-prototype #help-link:hover, .member-list dt .simplified-prototype:hover, .toplevel.parameters-list > .parameter-item:hover, .phobos-booktable tr:hover, pre.d_code, .block-code:not([data-language=""]):not([data-language="pre"])
 	{
 		background-color: var(--body-background-least);
 	}
 
-	a.btn, body.frame #forum-content table.forum-table, .CodeMirror-gutters, .fa-select select, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .d_decl, .quickindex, select, ul.pageNav li.selected, .entry-header, .entry-footer, #sidebar, .forum-table > tbody > tr.subheader > th, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select
+	a.btn, body.frame #forum-content table.forum-table, .CodeMirror-gutters, .fa-select select, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .d_decl, .quickindex, select, ul.pageNav li.selected, .entry-header, .entry-footer, #sidebar, .forum-table > tbody > tr.subheader > th, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, :target
 	{
 		background-color: var(--body-background-less);
 	}
