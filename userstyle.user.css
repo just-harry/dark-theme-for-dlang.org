@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dlang.org, run.dlang.io - Dark Theme
 @namespace      github.com/openstyles/stylus
-@version        0.3.0
+@version        0.3.1
 @description    A dark-theme for dlang.org, run.dlang.io, and dpldocs.info
 @author         https://github.com/Just-Harry
 ==/UserStyle== */
@@ -37,20 +37,27 @@
 		--code-typename: #6A6ADD;
 	}
 
-	body, body.doc input, body.doc textarea, body.std input, body.std textarea, .navbar-bottom, .nav-links, .site-info, blockquote, blockquote p:before
+	body, body.doc input, body.doc textarea, body.std input, body.std textarea, .navbar-bottom, .nav-links, .site-info, blockquote, blockquote p:before, .mw-body
 	{
 		background-color: var(--body-background);
 		color: var(--text);
 	}
 
-	.mw-body, #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1), #mw-content-text > div:nth-child(3)
+	/* The following rule is for the inline styles on the homepage of wiki.dlang.org */
+
+	#mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), #mw-content-text > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1), #mw-content-text > div:nth-child(3)
 	{
 		background-color: var(--body-background) !important;
 		color: var(--text) !important;
 		border-color: var(--border-main) !important;
 	}
 
-	div#search-box form, .subnav, .subnav-helper, body#Home #content #tools, body#Home #content > .intro, body.frame #forum-content table.forum-table, textarea.d_code_stdin, textarea.d_code_args, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .leadingrow, .sidebar, .entry-content, body::before, .comments-area, #forum-index > tbody > tr > td:nth-child(2n), #group-index > tbody > tr > td:nth-child(2n), .post-info, .post-text, .subtabsHeader + div.repositoryReadme, #page-nav, .annotated-prototype .overloads li.overload-option, div#mw-head, #toc, .toc, .mw-warning, .toccolours, .catlinks, .mw-search-profile-tabs
+	.thread-post-time > span
+	{
+		color: var(--text) !important;
+	}
+
+	div#search-box form, .subnav, .subnav-helper, body#Home #content #tools, body#Home #content > .intro, body.frame #forum-content table.forum-table, textarea.d_code_stdin, textarea.d_code_args, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .leadingrow, .sidebar, .entry-content, body::before, .comments-area, #forum-index > tbody > tr > td:nth-child(2n), #group-index > tbody > tr > td:nth-child(2n), .post-info, .post-text, .subtabsHeader + div.repositoryReadme, #page-nav, .annotated-prototype .overloads li.overload-option, div#mw-head, #toc, .toc, .mw-warning, .toccolours, .catlinks, .mw-search-profile-tabs, .thread-start > tbody > tr:nth-child(2n), .horizontal-post-info, .forum-table > tbody > tr > th, .thread-start > tbody > tr > th
 	{
 		background-color: var(--body-background);
 	}
@@ -105,7 +112,7 @@
 		border-top-color: rgba(255, 255, 255, 0.1);
 	}
 
-	div#search-box form, span#search-query, span#search-dropdown, span#search-submit, .subnav, .subnav-helper, a.btn, pre, pre.prettyprint, div.prototype, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .CodeMirror, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .fa-select select, a.btn:hover, .d_decl > div, .d_decl + dd, select, .forum-table > tbody > tr > td, .forum-table > tbody > tr > th, .forum-table, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, #forum-content a img.post-gravatar, .subtabsHeader + div.repositoryReadme, .member-list dt .simplified-prototype, pre.d_code, .block-code:not([data-language=""]):not([data-language="pre"]), #toc, .toc, .mw-warning, .toccolours, .mw-body, div#simpleSearch, .catlinks, code, div.vectorTabs span, .mw-search-profile-tabs, .oo-ui-textInputWidget.oo-ui-widget-enabled input:hover, .oo-ui-textInputWidget.oo-ui-widget-enabled textarea:hover, input.oo-ui-inputWidget-input, .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button, .oo-ui-menuSelectWidget
+	div#search-box form, span#search-query, span#search-dropdown, span#search-submit, .subnav, .subnav-helper, a.btn, pre, pre.prettyprint, div.prototype, div.d_code_output, div.d_code_stdin, div.d_code_args, div.d_code_unittest, .CodeMirror, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .fa-select select, a.btn:hover, .d_decl > div, .d_decl + dd, select, .forum-table > tbody > tr > td, .forum-table > tbody > tr > th, .forum-table, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, #forum-content a img.post-gravatar, .subtabsHeader + div.repositoryReadme, .member-list dt .simplified-prototype, pre.d_code, .block-code:not([data-language=""]):not([data-language="pre"]), #toc, .toc, .mw-warning, .toccolours, .mw-body, div#simpleSearch, .catlinks, code, div.vectorTabs span, .mw-search-profile-tabs, .oo-ui-textInputWidget.oo-ui-widget-enabled input:hover, .oo-ui-textInputWidget.oo-ui-widget-enabled textarea:hover, input.oo-ui-inputWidget-input, .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button, .oo-ui-menuSelectWidget, .forum-table, .thread-start
 	{
 		border-color: var(--border-main);
 	}
@@ -140,7 +147,7 @@
 		background-color: var(--body-background-least);
 	}
 
-	a.btn, body.frame #forum-content table.forum-table, .CodeMirror-gutters, .fa-select select, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .d_decl, .quickindex, select, ul.pageNav li.selected, .entry-header, .entry-footer, #sidebar, .forum-table > tbody > tr.subheader > th, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, :target, div.vectorTabs span, .oo-ui-menuSelectWidget
+	a.btn, body.frame #forum-content table.forum-table, .CodeMirror-gutters, .fa-select select, div.editButton, div.openInEditorButton, div.runButton, div.resetButton, .d_decl, .quickindex, select, ul.pageNav li.selected, .entry-header, .entry-footer, #sidebar, .forum-table > tbody > tr.subheader > th, .btn-default, input.ng-pristine, .editor-btn-container input, .editor-btn-container select, :target, div.vectorTabs span, .oo-ui-menuSelectWidget, .thread-start > tbody > tr:nth-child(2n+1), .thread-start > tbody > tr > th
 	{
 		background-color: var(--body-background-less);
 	}
